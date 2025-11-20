@@ -214,3 +214,138 @@ AI工作模式，提示词的质量极大影响产品质量
 ## web development
 
 1. 您是一位全栈开发专家
+
+## entire project
+Please generate a single-file React application for a "Retro Camera Web App" with the following specifications:
+
+
+
+1. Visual Layout & Container Strategy
+
+- Theme: Retro aesthetic with a "Handwritten" font style for all text.
+
+- Title: "Bao Retro Camera" displayed at the top center.
+
+- Instructions: Display usage instructions at the bottom right.
+
+- Main Camera Container: 
+
+ - Create a fixed wrapper `div` that acts as the parent for the camera image, viewfinder, shutter button, and photo ejection slot.
+
+ - Positioning: This container must be fixed at exactly 64px from the bottom and 64px from the left of the viewport (`bottom: 64px; left: 64px;`).
+
+ - Dimensions: Width 450px, Height 450px.
+
+ - Z-index: 20
+
+ - All subsequent positioning coordinates (percentages) for camera elements are relative to this container.
+
+- Background Image within Container:
+
+ - Image Source: `https://s.baoyu.io/images/retro-camera.webp`﻿
+
+ - Size: 100% width and height of the container.
+
+ - Position: Left 0, Bottom 0
+
+
+
+2. Camera Functionality (The Viewfinder)
+
+- Access the user's webcam.
+
+- Viewfinder Position: The live video feed must be masked to a circle and positioned exactly over the camera lens.
+
+- CSS for Video (Relative to Container): `bottom: 32%; left: 62%; transform: translateX(-50%); width: 27%; height: 27%; border-radius: 50%;z-index: 30`.
+
+- Layering: The video must sit *above* the camera base image visually but within the container.
+
+
+
+3. Shutter & Photo Interaction
+
+- Shutter Button: Create an invisible clickable area over the camera's button.
+
+- CSS for Button (Relative to Container): `bottom: 40%; left: 18%; width: 11%; height: 11%; cursor: pointer;z-index: 30`.
+
+- Action: When clicked, play a shutter sound effect and trigger the "Photo Ejection" animation.
+
+
+
+4. Photo Ejection & Development Animation
+
+- Aspect Ratio: The generated Polaroid-style photo card must strictly follow a 3:4 portrait aspect ratio (Vertical).
+
+- Ejection Animation: The photo paper slides UPWARDS (negative Y) from behind the camera body.
+
+- Layering: The photo must appear to emerge from *inside* the camera (start with z-index(10) lower than camera body, then animate out).
+
+- Ejection Container Origin CSS: `transform: translateX(-50%); top: 0; left: 50%; width: 35%;height: 100%;` (start position relative to the camera container).
+
+- Ejection Container anmiation position from: ` translateY(0)` to ` translateY(-40%)`
+
+- Developing Effect: Once the photo is taken, the image on the paper should transition from white/blurry to clear/sharp over a few seconds.
+
+
+
+5. Drag & Drop "Photo Wall"
+
+- Interaction: The user must be able to drag the ejected photo *out* of the camera slot and drop it anywhere on the rest of the screen (the "Photo Wall").
+
+- Drag Handle: The entire Polaroid card (the white frame and the photo) must be interactive. The user should be able to click and drag from any part of the card to move it.
+
+- Logic: While developing, the photo is attached to the camera container. Once dragged, it becomes absolutely positioned on the main screen body.
+
+- Freedom: Once on the wall, photos can be dragged and repositioned freely.
+
+
+
+6. AI Integration & Text Interactions
+
+- Caption Generation: Use the Gemini Flash API to analyze the captured image content.
+
+- Prompt: Generate a warm, short blessing or nice comment based on the photo content.
+
+- Language Requirement: The generated text language must match the user's browser language.
+
+- Footer Layout: The bottom of the Polaroid paper (below the image) should display the current date and the AI-generated text.
+
+- Text Interaction & Icons:
+
+ - When hovering specifically over the text area, display two small icons:
+
+ 1. Pencil Icon: Enters edit mode.
+
+ 2. Refresh Icon: Re-triggers the AI generation for that specific photo to get a new caption.
+
+- Editing Logic:
+
+ - Trigger: Edit mode can be entered by clicking the Pencil icon OR by double-clicking the text itself.
+
+ - Behavior: When editing, replace the text display with an input/textarea showing the raw text.
+
+ - Controls: Pressing Enter saves the changes. Pressing Esc cancels the edit and reverts to the previous text.
+
+
+
+7. Photo Controls (Card Level)
+
+- Hover Actions: When hovering over a developed photo card on the wall (general hover), show a small toolbar at the top of the photo with:
+
+ - Download Button: When clicked, this must render the entire Polaroid card (including the white frame, the photo, the date, and the handwritten caption) into a single image file and download it. (Recommended: use `html2canvas` or similar logic).
+
+ - Delete Button: Removes the photo from the screen.
+
+
+
+Technical Stack
+
+- React (functional components).
+
+- Tailwind CSS for styling.
+
+- Framer Motion (recommended for complex dragging and layout animations).
+
+- Lucide-react for icons.
+
+- html2canvas (or similar) for snapshotting the DOM elements.
