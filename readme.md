@@ -4,6 +4,11 @@
 
 AI工作模式，提示词的质量极大影响产品质量
 
+## work flow
+gemini3pro 设计图标、html版高保真、设计图、图片动效
+codex设计产品、用户故事、设计代码架构
+claude写代码
+
 ## prototype design
 
 1. 您是一位熟练的开发人员，精通 HTML 、JavaScript 、CSS 和 TailwindCSS 。请根据以下要求创建一个网页：使用 Font Awesome 图标和 fakeimg 处理图片占位，确保页面设计美观且响应式，包含必要的 HTML 结构和样式。
