@@ -6,8 +6,8 @@ AI工作模式，提示词的质量极大影响产品质量
 
 ## work flow
 gemini3pro 设计图标、html版高保真、设计图、图片动效
-codex设计产品、用户故事、设计代码架构
-claude写代码
+codex设计产品、用户故事、设计代码架构，后端代码、逻辑性问题
+claude写代码、设计代码架构，前端代码
 
 ## prototype design
 
