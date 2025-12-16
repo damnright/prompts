@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "command": "uvx",
+      "disabled": false,
+      "env": {}
+    },
+    "figma-remote-mcp-server": {
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.figma.com/mcp",
+        "--static-oauth-client-metadata",
+        "{\"client_name\":\"Windsurf\",\"client_uri\":\"https://windsurf.ai\"}"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "env": {}
+    },
+    "mcp-playwright": {
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "env": {}
+    },
+    "memory": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "command": "npx",
+      "env": {
+        "MEMORY_FILE_PATH": ""
+      }
+    },
+    "sequential-thinking": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "command": "npx",
+      "env": {}
+    }
+  }
+}

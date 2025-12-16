@@ -1,0 +1,69 @@
+# Codex MCP 配置模板
+# 复制到 ~/.codex/config.toml
+
+model = "gpt-5.2"
+model_reasoning_effort = "xhigh"
+
+[mcp]
+enable = true
+enabled = true
+timeout_ms = 60000
+
+[mcp.servers.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "d:"]
+
+[mcp.servers.git]
+command = "uvx"
+args = ["mcp-server-git"]
+
+[mcp.servers.fetch]
+command = "uvx"
+args = ["mcp-server-fetch"]
+
+[mcp.servers.time]
+command = "uvx"
+args = ["mcp-server-time"]
+
+[mcp.servers.sequential-thinking]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+
+[mcp.servers.memory]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-memory"]
+
+[mcp.servers.memory.env]
+MEMORY_FILE_PATH = "C:\\Users\\yy\\AppData\\Roaming\\mcp\\memory\\memory.json"
+
+[mcp.servers.everything]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-everything"]
+
+[mcp.servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp@latest"]
+# 可选：若你有 Context7 API Key，可解除注释并填入，提升速率限制
+# [mcp.servers.context7.env]
+# CONTEXT7_API_KEY = "YOUR_CONTEXT7_API_KEY"
+
+[mcp.servers.serena]
+command = "uvx"
+args = ["serena-mcp-server"]
+
+[mcp.servers.grep]
+command = "uvx"
+args = ["--from", "mcp-grep", "mcp-grep-server"]
+
+[mcp.servers.grep.env]
+PATH = "C:\\Program Files\\Git\\usr\\bin;${PATH}"
+
+[mcp.servers.figma]
+command = "npx"
+args = [
+  "-y",
+  "mcp-remote",
+  "https://mcp.figma.com/mcp",
+  "--static-oauth-client-metadata",
+  "{\"client_name\":\"Codex CLI\",\"client_uri\":\"https://github.com/modelcontextprotocol\"}"
+]
