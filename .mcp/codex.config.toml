@@ -1,69 +1,55 @@
-# Codex MCP 配置模板
-# 复制到 ~/.codex/config.toml
-
 model = "gpt-5.2"
-model_reasoning_effort = "xhigh"
-
+model_reasoning_effort = "low"
+# Enable Streamable HTTP MCP servers (OAuth, bearer tokens, etc.)
+experimental_use_rmcp_client = true
 [mcp]
 enable = true
-enabled = true
 timeout_ms = 60000
 
-[mcp.servers.filesystem]
+[mcp_servers.filesystem]
 command = "npx"
-args = ["-y", "@modelcontextprotocol/server-filesystem", "d:"]
+args = ["-y", "@modelcontextprotocol/server-filesystem", "c:\\my"]
 
-[mcp.servers.git]
+[mcp_servers.git]
 command = "uvx"
 args = ["mcp-server-git"]
 
-[mcp.servers.fetch]
+[mcp_servers.fetch]
 command = "uvx"
 args = ["mcp-server-fetch"]
 
-[mcp.servers.time]
+[mcp_servers.time]
 command = "uvx"
 args = ["mcp-server-time"]
 
-[mcp.servers.sequential-thinking]
+[mcp_servers.sequential-thinking]
 command = "npx"
 args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
 
-[mcp.servers.memory]
+[mcp_servers.memory]
 command = "npx"
 args = ["-y", "@modelcontextprotocol/server-memory"]
 
-[mcp.servers.memory.env]
+[mcp_servers.memory.env]
 MEMORY_FILE_PATH = "C:\\Users\\yy\\AppData\\Roaming\\mcp\\memory\\memory.json"
 
-[mcp.servers.everything]
+[mcp_servers.everything]
 command = "npx"
 args = ["-y", "@modelcontextprotocol/server-everything"]
 
-[mcp.servers.context7]
+[mcp_servers.context7]
 command = "npx"
 args = ["-y", "@upstash/context7-mcp@latest"]
 # 可选：若你有 Context7 API Key，可解除注释并填入，提升速率限制
 # [mcp.servers.context7.env]
 # CONTEXT7_API_KEY = "YOUR_CONTEXT7_API_KEY"
 
-[mcp.servers.serena]
+[mcp_servers.serena]
 command = "uvx"
 args = ["serena-mcp-server"]
+# Serena 为代码语义检索/编辑工具集（需 Python 3.11+；uv 会自动拉取）
+# 首次触发其工具可能安装语言服务器，少量耗时属正常
 
-[mcp.servers.grep]
-command = "uvx"
-args = ["--from", "mcp-grep", "mcp-grep-server"]
-
-[mcp.servers.grep.env]
-PATH = "C:\\Program Files\\Git\\usr\\bin;${PATH}"
-
-[mcp.servers.figma]
-command = "npx"
-args = [
-  "-y",
-  "mcp-remote",
-  "https://mcp.figma.com/mcp",
-  "--static-oauth-client-metadata",
-  "{\"client_name\":\"Codex CLI\",\"client_uri\":\"https://github.com/modelcontextprotocol\"}"
-]
+[mcp_servers.figma_remote]
+# Figma Remote MCP server (OAuth login required).
+url = "https://mcp.figma.com/mcp"
