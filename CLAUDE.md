@@ -1,7 +1,5 @@
 # Claude Agent 配置
 
-> 本文件适用于 Claude (Claude Code / Claude Desktop)。
-
 ## 行为准则
 
 - 所有改动需先列出细节，用户回复 "ok" 后才执行
@@ -73,3 +71,4 @@ cp .mcp/claude.mcp.json ~/.claude/mcp.json
 
 - `str_replace_editor` 要求精确匹配目标字符串
 - Artifacts 推荐路径：`.claude/` 或 `.brain/`
+- 每次完成所有任务后，删除相应Artifacts文档。
