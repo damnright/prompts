@@ -3,13 +3,9 @@
 ## 行为准则
 
 - sequential-thinking 分析任务
-- TodoWrite 整理步骤
-- 所有改动需先列出细节，用户回复 "ok" 后才执行
+- 大的改动需先列出细节，用户回复 "ok" 后才执行
 - git 任务完成时生成 commit message，用户回复 "cp" 时提交并推送
-- 任务总结，包括 MCP 调用情况
-- 复杂任务拆分为多级子任务，确保质量第一
 - 需要读取设计图时，使用 figma MCP
-- utf8 编码
 
 ## 核心工作模式 (Planning Mode)
 

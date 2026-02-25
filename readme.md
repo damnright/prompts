@@ -1,13 +1,13 @@
 # Common Prompts
 
-尽量使用ask模式  比agent模式性能好
+agent.md内容尽量少，能不写就不写
 
 AI工作模式，提示词的质量极大影响产品质量
 
 ## work flow
 gemini3pro 设计图标、html版高保真、设计图、图片动效
 codex设计产品、用户故事、设计代码架构，前端逻辑性功能、后端代码、逻辑性问题
-claude 简单快速实现、前端画UI
+claude 快速实现、前端画UI
 
 ## prototype design
 

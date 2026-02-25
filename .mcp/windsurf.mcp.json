@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "deepwiki": {
+      "disabled": false,
+      "headers": {},
+      "serverUrl": "https://mcp.deepwiki.com/mcp"
+    },
     "fetch": {
       "args": [
         "mcp-server-fetch"
@@ -15,6 +20,16 @@
         "https://mcp.figma.com/mcp",
         "--static-oauth-client-metadata",
         "{\"client_name\":\"Windsurf\",\"client_uri\":\"https://windsurf.ai\"}"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "env": {}
+    },
+    "filesystem": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        ""
       ],
       "command": "npx",
       "disabled": false,
@@ -39,13 +54,25 @@
         "MEMORY_FILE_PATH": ""
       }
     },
+    "puppeteer": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "env": {}
+    },
     "sequential-thinking": {
       "args": [
         "-y",
         "@modelcontextprotocol/server-sequential-thinking"
       ],
       "command": "npx",
-      "env": {}
+      "disabled": false,
+      "env": {
+        "DISABLE_THOUGHT_LOGGING": "true"
+      }
     }
   }
 }
