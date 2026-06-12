@@ -1,0 +1,38 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "usernamehw.errorlens",
+    "gruntfuggly.todo-tree",
+    "humao.rest-client",
+    "streetsidesoftware.code-spell-checker",
+    "ritwickdey.liveserver",
+    "ecmel.vscode-html-css",
+    "pranaygp.vscode-css-peek",
+    "zignd.html-css-class-completion",
+    "bradlc.vscode-tailwindcss",
+    "vue.volar",
+    "dsznajder.es7-react-js-snippets",
+    "melancholydonkey.wechat-mini-program",
+    "qiu8310.minapp-vscode",
+    "dart-code.flutter",
+    "dart-code.dart-code",
+    "jeroen-meijer.pubspec-assist",
+    "nash.awesome-flutter-snippets",
+    "localizely.flutter-intl",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "ms-toolsai.jupyter",
+    "charliermarsh.ruff",
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-python.mypy-type-checker"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur"
+  ]
+}
