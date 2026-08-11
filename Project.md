@@ -20,6 +20,12 @@ integration：code rabbit/cloudflare
 
 toolchain: biome
 
+## UI设计
+stitch设计探索
+Figma定稿
+uizard 草图转换为产品原型
+RunningHub、tapnow等 生成插画、素材、背景、装饰
+
 ## AGENTS 应用开发
 
 Mirofish
