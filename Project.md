@@ -20,6 +20,12 @@ integration：code rabbit/cloudflare
 
 toolchain: biome
 
+## agent工作流
+多agent开会：
+- kimi k3负责前端、UI/UX、集成测试、产品测试、写材料
+- gpt、glm5.3 后端、单元测试，交叉验证
+- 主agent指挥其它子agent
+
 ## UI设计
 stitch设计探索
 Figma定稿
