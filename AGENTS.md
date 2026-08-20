@@ -2,7 +2,7 @@
 
 ## 行为准则
 
-- **sequential-thinking** 分析复杂任务
+- 任务复杂时拆分多个 subagents 并行处理，subagents分别负责不同任务或相同任务交叉验证
 - git 任务完成时生成 commit message，用户回复 "cp" 时提交推送
 
 ## Planning Mode（仅复杂任务）
