@@ -2,6 +2,10 @@
 
 agent.md内容尽量少，能不写就不写
 
+## agent rules
+
+Claude Code 与 Codex 共用规则（全局底层规则 + 项目初始模板）：见 [rules/](rules/)
+
 AI工作模式，提示词的质量极大影响产品质量
 
 ## work flow
