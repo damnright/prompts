@@ -489,29 +489,35 @@
 
 ---
 
-## 阶段十四：Go
+## 阶段十四：Java 后端
 
-只有出现明确理由再学深：
+产品验证成功后，再系统学习 Java 后端：
 
-- [ ] **46. Go**
-  - struct / interface
-  - context
-  - goroutine
-  - channel
-  - error
-  - HTTP
+- [ ] **46. Java 后端**
+  - Java 核心语法
+  - 集合 / 泛型
+  - 异常处理
+  - 并发基础
+  - Maven
+  - Spring Boot
+  - Spring MVC
+  - Bean Validation
+  - Spring Security
+  - JPA / MyBatis
   - PostgreSQL
+  - Transaction
+  - API Test
 
 适合未来：
 
-- 高并发服务
-- WebSocket
-- Worker
-- API Gateway
-- 基础设施
-- 降低服务器资源成本
+- 复杂业务后端
+- 企业级权限与事务
+- 管理后台与运营系统
+- 定时任务与异步任务
+- 与现有 Java 系统集成
+- 大型团队长期维护
 
-> 不要因为“Go 很好”就在 MVP 阶段重写正常工作的 TypeScript 后端。
+> 不要为了学习 Java 就在 MVP 阶段重写正常工作的 TypeScript 后端；优先用于产品验证成功后的新模块或明确需要升级的服务。
 
 ---
 
@@ -599,7 +605,7 @@ AI文字 + AI语音
 ```text
 Python
 ↓
-Go（按需）
+Java 后端
 ↓
 Android
 ↓
@@ -627,7 +633,7 @@ KMP（再评估）
 - 各种 SwiftUI API
 - Node框架API
 - Python语法
-- Go语法
+- Java语法细节与 Spring API
 - Kotlin语法
 
 核心原则还是：
