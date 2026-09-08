@@ -1,11 +1,16 @@
 ## 阶段一：数据库与网络基础
 
-- [ ] **1. SQL 基础**
+- [ ] **1. SQL 基础（三天）**
   - SELECT / INSERT / UPDATE / DELETE
   - JOIN
   - GROUP BY
   - 子查询
   - 窗口函数基础
+  - 学习安排：[SQL 三天从零教程：概念、建库、连接与逐节实操](sql-learning/README.md)
+  - 本地工具：复用 OrbStack + TablePlus，运行独立的 PostgreSQL 学习数据库
+  - 每天约 4 小时，通过英语 App 数据练习完成查询、增删改、多表统计和窗口函数
+  - 验收：24 道练习通过结果检查；独立完成学习概览查询，并解释 NULL、JOIN 重复行和统计口径
+  - 三天完成 SQL 入门；索引、锁、隔离级别、性能调优等继续在第 2 项 PostgreSQL 中学习
 
 - [ ] **2. PostgreSQL**
   - 表设计
@@ -72,7 +77,48 @@
 
 ---
 
-## ★ 完成 1～6 后正式开始产品开发
+## 阶段三：Go 后端入门
+
+产品开发前完成 Go 基础和最小 API 实作。后续产品业务后端统一使用 **Go + PostgreSQL**；iOS / iPadOS 客户端继续使用 Swift / SwiftUI。
+
+- [ ] **7. Go 基础**
+  - 类型、变量、控制流、函数与多返回值
+  - struct / method / interface
+  - slice / map / pointer
+  - error / errors.Is / errors.As
+  - defer / 资源释放
+  - package / Go Modules
+  - context / 超时 / 取消
+  - goroutine / channel / 同步基础
+  - gofmt / go test / go vet
+
+> 目标：能读、改、Review AI 写的 Go；能解释错误传播、资源释放和请求取消，不要求先深入复杂并发。
+
+- [ ] **8. Go HTTP / PostgreSQL 实作**
+  - net/http / Router / Handler / Middleware
+  - JSON 编解码 / 请求校验
+  - Status Code / 统一错误响应
+  - Config / 环境变量 / slog
+  - pgx / pgxpool / 参数化 SQL
+  - PostgreSQL CRUD / Transaction
+  - 请求 context 传递 / 查询超时
+  - Handler / Service / Repository 的职责
+  - httptest / 数据库集成测试
+
+先用标准库 net/http 和 pgx 完成练习，理解从 HTTP 请求到 SQL 的完整调用链。
+
+**进入产品开发的验收：**
+
+- 独立运行一个 Go + PostgreSQL 单词 API，支持列表、新建、修改、删除和分页。
+- 使用参数化 SQL，能正确处理非法输入、记录不存在、唯一约束冲突和数据库超时。
+- 用一次事务完成关联写入，并验证失败时回滚。
+- 跑通 HTTP 测试和数据库集成测试；能逐层解释 AI 生成的实现。
+
+学习资料：[Go Tour](https://go.dev/tour/)、[Go 数据库访问](https://go.dev/doc/database/)、[net/http](https://pkg.go.dev/net/http)、[pgx](https://pkg.go.dev/github.com/jackc/pgx/v5)。
+
+---
+
+## ★ 完成 1～8 后正式开始产品开发
 
 不要继续纯学习。
 
@@ -80,11 +126,13 @@
 
 > **产品开发 70% + 针对性学习 30%。**
 
+> 产品业务后端统一使用 Go，数据库使用 PostgreSQL；后续 Python 用于分析、评测及确有需要的独立 AI 服务。
+
 ---
 
-## 阶段三：iOS 工程能力
+## 阶段四：iOS 工程能力
 
-- [ ] **7. SwiftUI 项目架构**
+- [ ] **9. SwiftUI 项目架构**
   - Feature 模块化
   - View / ViewModel
   - Service
@@ -92,7 +140,7 @@
   - Dependency Injection
   - 状态与业务逻辑分离
 
-- [ ] **8. iOS 网络层**
+- [ ] **10. iOS 网络层**
   - URLSession
   - Codable
   - async / await
@@ -101,7 +149,7 @@
   - Token / Authentication
   - SSE Streaming
 
-- [ ] **9. 本地数据**
+- [ ] **11. 本地数据**
   - UserDefaults
   - Keychain
   - SwiftData
@@ -109,7 +157,7 @@
   - Offline 基础
   - 数据同步思路
 
-- [ ] **10. AVFoundation / 音频**
+- [ ] **12. AVFoundation / 音频**
   - 麦克风权限
   - Audio Recording
   - Audio Playback
@@ -123,22 +171,11 @@
 
 ---
 
-## 阶段四：后端与 API
+## 阶段五：API 设计与数据建模
 
-你已经熟 TypeScript，因此直接学习工程和架构部分。
+在产品开发中继续深化 Go 后端的 API 设计和数据建模。
 
-- [ ] **11. TypeScript 后端**
-  - Node.js
-  - Fastify 或 NestJS
-  - Router
-  - Middleware
-  - Validation
-  - Error Handling
-  - Config
-  - Logging
-  - PostgreSQL
-
-- [ ] **12. API 设计**
+- [ ] **13. API 设计**
   - REST Resource
   - Pagination
   - Filtering
@@ -148,7 +185,7 @@
   - Rate Limit
   - Authentication / Authorization
 
-- [ ] **13. 数据建模**
+- [ ] **14. 数据建模**
   - User
   - Word
   - WordGroup
@@ -163,16 +200,16 @@
 
 ---
 
-## 阶段五：英语学习核心业务架构
+## 阶段六：英语学习核心业务架构
 
-- [ ] **14. 状态机**
+- [ ] **15. 状态机**
   - 学习 Session 状态
   - 单词掌握状态
   - AI 对话状态
   - 任务状态
   - 支付状态
 
-- [ ] **15. 学习数据模型**
+- [ ] **16. 学习数据模型**
   - 学过
   - 见过
   - 正确使用
@@ -182,14 +219,14 @@
   - 遗忘
   - Review Schedule
 
-- [ ] **16. 间隔重复基础**
+- [ ] **17. 间隔重复基础**
   - Spaced Repetition
   - Forgetting Curve
   - SM-2 基本思想
   - FSRS 基本思想
   - 不必一开始自己发明算法
 
-- [ ] **17. AI 训练会话设计**
+- [ ] **18. AI 训练会话设计**
   - Target Words
   - Completed Words
   - Weak Words
@@ -201,9 +238,9 @@
 
 ---
 
-## 阶段六：AI 对话 V1
+## 阶段七：AI 对话 V1
 
-- [ ] **18. LLM API**
+- [ ] **19. LLM API**
   - System / User / Assistant
   - Structured Output
   - Tool Calling
@@ -212,7 +249,7 @@
   - Token
   - Temperature 等基础参数
 
-- [ ] **19. Prompt Engineering**
+- [ ] **20. Prompt Engineering**
   - 目标单词约束
   - 自然引导
   - 不机械塞词
@@ -221,7 +258,7 @@
   - CEFR 等级
   - 对话场景控制
 
-- [ ] **20. AI Evaluation**
+- [ ] **21. AI Evaluation**
   - 是否覆盖目标词
   - 是否正确使用
   - 是否自然
@@ -232,9 +269,9 @@
 
 ---
 
-## 阶段七：AI 语音 V2
+## 阶段八：AI 语音 V2
 
-- [ ] **21. ASR**
+- [ ] **22. ASR**
   - Audio → Text
   - 音频格式
   - 上传
@@ -242,7 +279,7 @@
   - 错误处理
   - 英语识别效果评测
 
-- [ ] **22. TTS**
+- [ ] **23. TTS**
   - Text → Speech
   - Voice
   - Accent
@@ -250,7 +287,7 @@
   - Streaming / 非 Streaming
   - 音频缓存
 
-- [ ] **23. V2 语音链路**
+- [ ] **24. V2 语音链路**
   - 开始录音
   - 停止录音
   - 上传
@@ -276,20 +313,20 @@
 
 ---
 
-## 阶段八：安全与账号
+## 阶段九：安全与账号
 
-- [ ] **24. Authentication**
+- [ ] **25. Authentication**
   - Session / Token
   - Sign in with Apple
   - Refresh Token
   - Device 登录
 
-- [ ] **25. Authorization**
+- [ ] **26. Authorization**
   - 用户只能访问自己的数据
   - 管理员权限
   - Resource Ownership
 
-- [ ] **26. 安全基础**
+- [ ] **27. 安全基础**
   - SQL Injection
   - XSS
   - CSRF
@@ -302,9 +339,9 @@
 
 ---
 
-## 阶段九：Apple 商业化
+## 阶段十：Apple 商业化
 
-- [ ] **27. StoreKit 2**
+- [ ] **28. StoreKit 2**
   - Product
   - Subscription
   - Purchase
@@ -313,7 +350,7 @@
   - Subscription Status
   - Server Verification 基础
 
-- [ ] **28. Apple 发布**
+- [ ] **29. Apple 发布**
   - Bundle ID
   - Signing
   - Provisioning
@@ -323,7 +360,7 @@
   - App Review
   - Crash Log
 
-- [ ] **29. iPhone + iPad QA**
+- [ ] **30. iPhone + iPad QA**
   - 多尺寸
   - 横屏
   - iPad Split View
@@ -335,16 +372,16 @@
 
 ---
 
-## 阶段十：工程与稳定性
+## 阶段十一：工程与稳定性
 
-- [ ] **30. Testing**
+- [ ] **31. Testing**
   - Unit Test
   - Integration Test
   - API Test
   - AI Evaluation Test
   - 核心学习流程测试
 
-- [ ] **31. Observability**
+- [ ] **32. Observability**
   - Structured Logging
   - Request ID
   - Error Tracking
@@ -353,7 +390,7 @@
   - Token / Cost
   - Latency
 
-- [ ] **32. 性能**
+- [ ] **33. 性能**
   - Slow SQL
   - Index
   - N+1
@@ -362,7 +399,7 @@
   - App 启动
   - API latency
 
-- [ ] **33. Docker / Linux**
+- [ ] **34. Docker / Linux**
   - Dockerfile
   - Docker Compose
   - Environment
@@ -370,7 +407,7 @@
   - Network
   - Linux Process / Port / Log
 
-- [ ] **34. CI/CD**
+- [ ] **35. CI/CD**
   - GitHub Actions
   - Test
   - Build
@@ -380,14 +417,14 @@
 
 ---
 
-## 阶段十一：产品架构能力
+## 阶段十二：产品架构能力
 
-- [ ] **35. 模块边界**
+- [ ] **36. 模块边界**
   - UI / Domain / Infrastructure
   - 客户端 / 服务端职责
   - AI / 业务职责
 
-- [ ] **36. Failure-first 思维**
+- [ ] **37. Failure-first 思维**
   - AI超时
   - ASR失败
   - TTS失败
@@ -397,7 +434,7 @@
   - App退出
   - 支付回调异常
 
-- [ ] **37. 异步系统**
+- [ ] **38. 异步系统**
   - Queue
   - Job
   - Worker
@@ -408,7 +445,7 @@
 
 > MVP 没有长任务时，先理解，不一定实现。
 
-- [ ] **38. Redis**
+- [ ] **39. Redis**
   - Cache
   - TTL
   - Rate Limit
@@ -417,7 +454,7 @@
 
 > PostgreSQL 能解决时不要急着加 Redis。
 
-- [ ] **39. 分布式系统基础**
+- [ ] **40. 分布式系统基础**
   - Timeout
   - Retry
   - Backoff
@@ -427,9 +464,9 @@
 
 ---
 
-## 阶段十二：产品验证
+## 阶段十三：产品验证
 
-- [ ] **40. MVP 指标**
+- [ ] **41. MVP 指标**
   - 首次学习完成率
   - 单词组完成率
   - AI 对话启动率
@@ -441,7 +478,7 @@
   - 付费转化
   - AI 成本 / 用户
 
-- [ ] **41. 埋点与分析**
+- [ ] **42. 埋点与分析**
   - Event
   - Funnel
   - Retention
@@ -449,7 +486,7 @@
   - Conversion
   - Feature Usage
 
-- [ ] **42. 用户反馈**
+- [ ] **43. 用户反馈**
   - TestFlight
   - 用户访谈
   - 学习过程观察
@@ -461,16 +498,16 @@
 
 # 产品验证成功后再学
 
-## 阶段十三：Python
+## 阶段十四：Python
 
-- [ ] **43. Python 基础**
+- [ ] **44. Python 基础**
   - typing
   - async
   - package
   - uv
   - exception
 
-- [ ] **44. AI / Data Python**
+- [ ] **45. AI / Data Python**
   - Pandas
   - NumPy
   - 数据分析
@@ -479,45 +516,13 @@
   - 音频处理
   - 模型评测
 
-- [ ] **45. 真正需要时再拆 Python AI Service**
+- [ ] **46. 真正需要时再拆 Python AI Service**
   - FastAPI
   - Worker
   - Model Service
   - Embedding
   - RAG
   - ML
-
----
-
-## 阶段十四：Java 后端
-
-产品验证成功后，再系统学习 Java 后端：
-
-- [ ] **46. Java 后端**
-  - Java 核心语法
-  - 集合 / 泛型
-  - 异常处理
-  - 并发基础
-  - Maven
-  - Spring Boot
-  - Spring MVC
-  - Bean Validation
-  - Spring Security
-  - JPA / MyBatis
-  - PostgreSQL
-  - Transaction
-  - API Test
-
-适合未来：
-
-- 复杂业务后端
-- 企业级权限与事务
-- 管理后台与运营系统
-- 定时任务与异步任务
-- 与现有 Java 系统集成
-- 大型团队长期维护
-
-> 不要为了学习 Java 就在 MVP 阶段重写正常工作的 TypeScript 后端；优先用于产品验证成功后的新模块或明确需要升级的服务。
 
 ---
 
@@ -569,6 +574,10 @@ Compose Android
 5 SwiftUI
 ↓
 6 响应式布局
+↓
+7 Go 基础
+↓
+8 Go HTTP / PostgreSQL 实作
 ```
 
 ### ★ 到这里立即开始英语 App
@@ -576,36 +585,34 @@ Compose Android
 然后产品需要什么，就按：
 
 ```text
-7～13
-Swift工程 + TS后端 + 数据建模
+9～14
+Swift工程 + API设计 + 数据建模（Go后端）
 
 ↓
 
-14～17
+15～18
 学习系统架构
 
 ↓
 
-18～23
+19～24
 AI文字 + AI语音
 
 ↓
 
-24～29
+25～30
 账号、安全、IAP、发布
 
 ↓
 
-30～42
+31～43
 测试、架构、产品验证
 ```
 
 ### 产品确认成立后
 
 ```text
-Python
-↓
-Java 后端
+Python（分析 / 评测 / 必要的 AI 服务）
 ↓
 Android
 ↓
@@ -618,6 +625,7 @@ KMP（再评估）
 
 - PostgreSQL / SQL
 - HTTP / API
+- Go 后端工程：错误处理、context、事务、测试与资源生命周期
 - 数据建模
 - 系统架构
 - SwiftUI运行机制
@@ -631,9 +639,8 @@ KMP（再评估）
 
 - Swift语法细节
 - 各种 SwiftUI API
-- Node框架API
+- Go 语法细节与标准库 API（错误处理、context 等核心机制需要理解）
 - Python语法
-- Java语法细节与 Spring API
 - Kotlin语法
 
 核心原则还是：
