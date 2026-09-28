@@ -1,29 +1,21 @@
+学习方式统一见[通用学习流程](learning-flow.md)：简要提纲 → 指定章节资料 → 对应实操 → 架构与设计补充。此流程适用于下面所有技术主题，不设时间或刷题安排；各项已有的功能与能力验收仍需完成。
+
 ## 阶段一：数据库与网络基础
 
-- [ ] **1. SQL 基础（三天）**
-  - SELECT / INSERT / UPDATE / DELETE
-  - JOIN
-  - GROUP BY
-  - 子查询
-  - 窗口函数基础
-  - 学习安排：[SQL 三天从零教程：概念、建库、连接与逐节实操](sql-learning/README.md)
-  - 本地工具：复用 OrbStack + TablePlus，运行独立的 PostgreSQL 学习数据库
-  - 每天约 4 小时，通过英语 App 数据练习完成查询、增删改、多表统计和窗口函数
-  - 验收：24 道练习通过结果检查；独立完成学习概览查询，并解释 NULL、JOIN 重复行和统计口径
-  - 三天完成 SQL 入门；索引、锁、隔离级别、性能调优等继续在第 2 项 PostgreSQL 中学习
-
-- [ ] **2. PostgreSQL**
-  - 表设计
-  - Primary Key / Foreign Key
-  - Unique
-  - Index
-  - Transaction
-  - Lock
-  - Isolation Level
-  - EXPLAIN / EXPLAIN ANALYZE
-  - JSONB
-  - Migration
-  - Connection Pool
+- [ ] **1～2. SQL / PostgreSQL 基础与设计评审**
+  - 表与基本查询：表、字段、SELECT、WHERE、NULL、ORDER BY、LIMIT
+  - 类型与关系：时间、JSONB、主外键、组合唯一、非空与范围约束
+  - 修改与事务：INSERT / UPDATE / DELETE、ACID、自动提交、BEGIN / COMMIT / ROLLBACK / SAVEPOINT、失败事务、零行更新与重复请求
+  - 多表与统计：JOIN、GROUP BY、聚合与结果粒度；子查询、CTE、窗口函数按需识读
+  - 性能与并发：索引、分页、EXPLAIN、MVCC、隔离级别、锁与重试
+  - 演进与运行：兼容迁移、VACUUM、WAL、备份恢复、连接预算与权限
+  - 数据库设计：实体关系、每行粒度、事实 / 状态 / 快照、归属与生命周期
+  - 学习入口：[融合章节导读](sql-learning/README.md)，沿第 1～9 单元同时学习 SQL 与 PostgreSQL；Neon 为主教材，官方文档按具体问题查证
+  - 对应实操：[查询、约束、事务、索引、并发、迁移与架构任务](sql-learning/practice.md)
+  - 设计补充：[八表案例、评审清单、收藏设计题与参考评审](sql-learning/design.md)
+  - 环境：[复用现有 OrbStack + TablePlus](sql-learning/environment.md)
+  - 完成标准：基础语法看懂即可；能说明核心机制、设计小功能的数据模型，用反例指出方案的问题和取舍。复杂查询不作为进入数据库设计的门槛
+  - Go 接入先理解系统边界，驱动与 API 编码在第 7～8 项完成
 
 - [ ] **3. HTTP / API 基础**
   - HTTP / HTTPS
@@ -563,9 +555,7 @@ Compose Android
 ### 第一批：开始产品前
 
 ```text
-1 SQL
-↓
-2 PostgreSQL
+1～2 SQL / PostgreSQL 基础与设计评审
 ↓
 3 HTTP/API
 ↓
@@ -623,7 +613,7 @@ KMP（再评估）
 
 **优先深入：**
 
-- PostgreSQL / SQL
+- PostgreSQL 数据库设计与评审：模型、约束、并发、查询、迁移与恢复
 - HTTP / API
 - Go 后端工程：错误处理、context、事务、测试与资源生命周期
 - 数据建模
@@ -637,6 +627,7 @@ KMP（再评估）
 
 **只需要达到能读、能改、能 Review AI：**
 
+- SQL 语法细节（查询范围、统计粒度和数据修改影响需要理解）
 - Swift语法细节
 - 各种 SwiftUI API
 - Go 语法细节与标准库 API（错误处理、context 等核心机制需要理解）

@@ -78,19 +78,23 @@ def comparable(value):
 
 def check(path):
     exercises = blocks(read(path))
-    if not exercises or not 1 <= int(exercises[0][0][1:]) <= 24:
-        raise RuntimeError("检查文件必须保留某一天的完整 8 个 Q 编号。")
-    start = (int(exercises[0][0][1:]) - 1) // 8 * 8 + 1
-    ids = [f"Q{i:02}" for i in range(start, start + 8)]
-    if [question for question, _ in exercises] != ids:
-        raise RuntimeError("请保留当天全部 8 个 Q 编号，且不要重复或调整顺序。")
-    empty = [question for question, sql in exercises if not re.sub(r"--[^\n]*", "", sql).strip()]
-    if empty:
-        raise RuntimeError("未作答：" + "、".join(empty) + "。请先填写对应 TODO。")
     expected = json.loads(read("expected.json"))
+    ids = list(expected)
+    if [question for question, _ in exercises] != ids:
+        raise RuntimeError(f"请保留统一列表的全部 {len(ids)} 个 Q 编号，且不要重复或调整顺序。")
+    empty = [question for question, sql in exercises if not re.sub(r"--[^\n]*", "", sql).strip()]
+    exercises = [(question, sql) for question, sql in exercises if question not in empty]
+    if not exercises:
+        raise RuntimeError("尚未作答，请在任意题目的 TODO 下填写答案。")
+    ids = [question for question, _ in exercises]
+    crud = {"Q06", "Q07", "Q08"}
+    if crud.intersection(ids) and not crud.issubset(ids):
+        raise RuntimeError("Q06～Q08 依赖同一条练习数据，请一起作答；其他题可独立选做。")
+    if empty:
+        print("跳过未作答：" + "、".join(empty))
     # 每题一个结果表；psql 的标记分隔各题，CRUD 在同一连接内依次执行。
     script = "\n".join(f"\\echo __SQL_LAB_{question}__\n{sql}" for question, sql in exercises)
-    # Q06～Q08 结束后以及所有查询题结束后，种子数据应与开始时完全一致。
+    # 全部已作答题结束后，种子数据应与开始时完全一致。
     tables = ["users", "words", "learning_sessions", "word_reviews"]
     snapshot = "\n".join(
         f"SELECT '{table}' AS table_name, json_agg(t ORDER BY id)::text AS data FROM {table} t;"
@@ -115,9 +119,9 @@ def check(path):
             print("预期：", [spec["columns"], *[[row[col] for col in spec["columns"]] for row in spec["rows"]]])
     intact = results.get("BEFORE", "").strip() == results.get("AFTER", "").strip()
     if not intact:
-        print("初始数据完整性检查未通过：检查增删改的范围和 Q08 的清理。")
-    print(f"{path}：{passed}/8 题通过；初始数据完整性{'通过' if intact else '未通过'}。")
-    return passed == 8 and intact
+        print("初始数据完整性检查未通过：检查增删改的范围及 Q08、Q32 的清理。")
+    print(f"{path}：{passed}/{len(ids)} 道已作答题通过；初始数据完整性{'通过' if intact else '未通过'}。")
+    return passed == len(ids) and intact
 
 
 def up():
@@ -170,17 +174,19 @@ def main():
     elif args == ["stop"]:
         print(compose("stop"), end="")
     elif args == ["test"]:
-        passed = [check(f"solutions/day{day}.sql") for day in (1, 2, 3)]
-        if not all(passed):
+        if any(not re.sub(r"--[^\n]*", "", sql).strip()
+               for _, sql in blocks(read("solutions/all.sql"))):
+            raise RuntimeError("参考答案存在未作答题。")
+        if not check("solutions/all.sql"):
             return 1
-        print("24 道参考答案与初始数据完整性检查全部通过。")
+        print("全部参考答案与初始数据完整性检查通过。")
     elif len(args) == 2 and args[0] == "check":
         return 0 if check(args[1]) else 1
     elif args and args[0] == "sql" and len(args) <= 2:
         path = args[1] if len(args) == 2 else "hello.sql"
         print(psql(practice_sql(read(path))), end="")
     else:
-        raise RuntimeError("用法：python3 lab.py up | status | stop | sql [文件.sql] | check exercises/day1.sql | test")
+        raise RuntimeError("用法：python3 lab.py up | status | stop | sql [文件.sql] | check exercises/all.sql | test")
     return 0
 
 
