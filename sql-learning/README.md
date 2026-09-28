@@ -8,6 +8,18 @@ SQL 是定义、查询和修改关系数据的语言，PostgreSQL 是本工程�
 
 先按[环境操作](environment.md)连接已有 OrbStack / TablePlus。继续使用 `prompts-sql-learning` 项目、`sql_learning` 数据库和默认 `127.0.0.1:55432`，密码保留在本地 .env。
 
+## 对应第 1～2 项：怎样把握学习深度
+
+本目录的“第 1～9 单元”是 SQL 内部的学习单元，不是总路线第 1～9 项的重新编号。SQL 与 PostgreSQL 共用一套材料和环境，避免先学抽象语法、再从头重复数据库教程。
+
+| 总路线范围 | 本目录学习任务 | 开工前应拿出的证据 |
+| --- | --- | --- |
+| 第 1 项：数据库基础 | 单元 1～5：查询、类型、约束、增删改、事务、关联与索引 | 能读写一个小功能的数据，解释 NULL、统计粒度、失败回滚和重复输入；能提出稳定排序与索引候选 |
+| 第 2 项：设计与评审 | 单元 6～9：并发、演进、系统边界和综合设计 | 能给出并发与归属反例，完成收藏设计和问题方案评审，说明历史、状态与删除的区别 |
+| 产品运行前再深化 | 单元 7 的恢复方案、单元 8 的连接与权限，结合总路线第 26～28、33～36 项 | 对外试用前真实恢复备份、落实权限并验证；不能把“读过”当作已经具备运行保障 |
+
+已有能力可以通过对应反例与实操证明后跳过。复杂报表、所有隔离级别的逐项实验、数据库内核和完整运维不作为开工门槛；不要求做完 Q01～Q32 才继续。
+
 ## 学习要点
 
 - 表、字段、类型、筛选、排序、空值与修改范围。
@@ -90,7 +102,7 @@ Neon 的 Section 编号来自 [Basic Tutorial](https://neon.com/postgresql/tutor
 
 - **资料**：**Administration → Section 2 Managing Schemas** 的 [Schema](https://neon.com/postgresql/administration/schema)；**Section 4 Roles & Privileges** 的 [Create Roles](https://neon.com/postgresql/administration/roles)、[Grant Privileges](https://neon.com/postgresql/administration/grant)、[Revoke Privileges](https://neon.com/postgresql/administration/revoke)、[Role Membership](https://neon.com/postgresql/administration/role-membership)。
 - **范围**：识读 database / schema、角色、对象权限及成员关系；理解运行账号与管理职责、数据库权限与业务用户授权的区别。当前只阅读，不修改学习库的角色与权限。
-- **实操与补充**：[第 8 单元](practice.md#architecture)，画请求到事务的路径，计算连接预算，标出授权、超时、外部 AI 调用与数据库事务的边界。实际 Go 驱动与 API 编码在 tech-list 第 7～8 项完成。
+- **实操与补充**：[第 8 单元](practice.md#architecture)，画请求到事务的路径，计算连接预算，标出授权、超时、外部 AI 调用与数据库事务的边界。实际驱动与 API 编码在 [Go 第 7～8 项](../go-learning/README.md)完成，使用独立的 go_learning schema，不修改 public 练习表。
 
 <a id="unit-9"></a>
 
@@ -128,6 +140,8 @@ Neon 的 Section 编号来自 [Basic Tutorial](https://neon.com/postgresql/tutor
 **本轮暂缓**：Neon 的集合运算、GROUPING SETS / CUBE / ROLLUP、导入导出、PL/pgSQL、触发器实现，以及分区、复制部署、内核与复杂调优。遇到产品需求再展开。
 
 ## 目录用途
+
+继续学习时，协议进入 [HTTP](../http-learning/README.md)，客户端进入 [Swift](../swift-learning/README.md)与 [SwiftUI](../swiftui-learning/README.md)，数据库访问实现进入 [Go](../go-learning/README.md)。产品规则的来源与取舍见[产品与市场](../product-learning/README.md)。
 
 | 文件 | 用途 |
 | --- | --- |
