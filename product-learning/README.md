@@ -1,47 +1,86 @@
-# 产品与市场：把想法变成可验证的首版方案
+# 产品、运营推广与商务商业知识导航
 
-[技术路线：第 9 项](../tech-list.md) · [通用学习流程](../learning-flow.md) · [实操与填写框架](practice.md) · [设计判断与参考评审](design.md)
+[产品知识体系](knowledge.md) · [产品判断与案例](design.md) · [运营推广](../growth-learning/README.md) · [商务商业](../business-learning/README.md)
 
-主教材为 **YC Startup School** 的指定课程，SBA 补充市场、成本与营销框架，UI/UX 复用[现有设计路线](../design-learning.md)。目标是决定为谁做、解决什么问题、如何接触用户、怎样判断值得继续；融资、公司治理和规模化管理不作为产品开工前置。
+本资料面向**国内产品与市场**，覆盖实体商品、数字产品、服务及其组合，以及面向个人、企业、政府与公共机构的业务。线上、线下、全国市场、区域市场和本地生活都在讨论范围内；不同领域的采购方式、使用频率、交付责任与经营约束分别说明，不以某个 App 为学习对象。
 
-本项可以和第 1～8 项并行。先完成一轮研究、原型与验证计划即可进入开发；真实留存、学习效果和付费证据必须在后续可用版本中积累。
+阅读方式是**知识体系 → 概念与机制 → 业务案例 → 指定资料查证**。没有练习、作业、填写模板、时间安排或产出验收。三份正文可以独立阅读，也可以沿同一业务问题互相参照。目标是理解选择为何成立、代价是什么、何时需要调整；具体行业的专业技术、资质和监管要求仍需按产品另查。
 
-## 1. 必须掌握的产品与市场知识
+## 1. 三个领域怎样连起来
 
-| 主题 | 需要能作出的判断 | 当前不要求 |
+| 领域 | 核心问题 | 主要知识 |
 | --- | --- | --- |
-| 人群与场景 | 区分用户、付费者、使用时刻、英语目标、首发地区与年龄范围 | 一开始覆盖所有英语学习者 |
-| 需求与研究 | 从过去行为、替代办法和实际付出判断问题，识别诱导提问与样本偏差 | 用访谈数量或口头好评证明需求 |
-| 市场与竞争 | 区分总体机会、可服务人群、实际可触达人群；看竞品和非软件替代方案 | 把宏观市场规模直接当作可获得收入 |
-| 定位与价值 | 说明谁因为什么结果愿意换用产品，差异化是否重要且可信 | 把“使用 AI”“功能更多”当作独立价值 |
-| MVP 与 UX | 用最小完整任务验证最危险的假设，写明确验收与暂缓范围 | 做残缺流程或提前搭完整平台 |
-| 定价与经济性 | 区分收费方式、价格、实际到手收入、可变成本、固定成本、获客和回本 | 用未经验证的留存外推确定的 LTV |
-| 渠道与营销 | 找到能接触目标人群的渠道，用清楚的价值表达吸引合适用户 | 一开始大规模投广告或铺所有渠道 |
-| 验证与迭代 | 分开看使用、持续使用、学习和付费；有继续、调整、停止的依据 | 把下载量、时长或 AI 评分单独当成功 |
+| [产品](knowledge.md) | 什么人需要什么结果，产品怎样可靠地交付这个结果 | 客户与需求、市场研究、产品战略、开发、组合、体验、质量、生命周期与组织协作 |
+| [运营推广](../growth-learning/knowledge.md) | 怎样让合适客户认识、选择、使用并再次购买 | 营销定位、品牌、渠道、内容、活动、客户经营、商品与商家运营、数据与预算 |
+| [商务商业](../business-learning/knowledge.md) | 价值如何变成可持续的交易与经营结果 | 经济学、商业模式、定价、财务、单位经济性、销售采购、谈判合同、供应链、组织与法律 |
 
-## 2. 指定资料、范围与实操
+三个领域必须使用一致的客户定义和价值承诺。推广说“当天安装”，产品和交付就要能安排安装；销售承诺定制，报价和产能就要承担定制成本；按年收费，服务和现金安排就要覆盖相应期间。
 
-以下课程来自 [YC 官方课程目录](https://www.ycombinator.com/blog/startup-school-videos)，视频按完整单课观看，不安排学习时长。SBA 美国商业背景中的方法可迁移，具体市场数据、地区规则和平台费用按实际目标市场核对，不能直接照搬。
+“转化、留存、复购”在不同业务里含义不同：日用品看补货和品牌选择，家电看可靠性、售后与转介绍，企业系统看上线使用和续约，本地服务看再次预约。不能把高频 App 的指标直接套到所有产品上。
 
-| 单元 | 资料与具体章节 / 范围 | 应用重点 | 对应实操 |
-| --- | --- | --- | --- |
-| P1a：识别问题 | YC [How To Talk To Users](https://www.youtube.com/watch?v=z1iF1c8w5Lg)，完整一课 | 对真实经历提问，区分事实、解释与假设 | [P1：访谈与证据](practice.md#p1) |
-| P1b：人群、市场与定位 | SBA [Plan your business](https://www.sba.gov/counseling/plan-your-business/) → Market research and competitive analysis 下 Use market research to find customers、Use competitive analysis to find a market advantage | 需求、可触达范围、替代方案与切换理由 | [P1：竞品与定位](practice.md#p1) |
-| P2a：确定首版 | YC [How to Build a Minimum Viable Product](https://www.youtube.com/watch?v=QRZ_l7cVzzU)，完整一课 | 把首版缩到可以验证假设的完整任务 | [P2：范围与验收](practice.md#p2) |
-| P2b：原型与可用性 | [设计学习路线](../design-learning.md) 2.1 产品 Brief、2.3 UX / 用户流、2.4 模式与状态、2.10 可用性测试、第 3 节检查表；每节跟随其指定外部资料 | 原型验证任务理解与可用性，标明加载、空、失败与恢复 | [P2：任务原型](practice.md#p2) |
-| P3a：收费与成本 | YC [Startup Business Models and Pricing](https://www.youtube.com/watch?v=oWZbWzAyHAE)，完整一课；SBA Plan your business → Calculate your startup costs 下 Identify your startup expenses、Estimate how much your expenses will cost、Add up your expenses for a full financial picture | 定价假设、到手收入、免费用户负担与高用量成本 | [P3：经济性](practice.md#p3) |
-| P3b：首批用户与验证 | YC [How to Get Your First Customers](https://www.youtube.com/watch?v=hyYCn_kAngI)，完整一课；SBA [Manage your business](https://www.sba.gov/counseling/manage-your-business/) → Marketing and sales → Use these sections in your marketing plan 下 Target market、Competitive advantage、Marketing action plan、Budget、Measure and update your plan | 渠道、信息表达、反馈入口、观察指标与决策 | [P3：渠道实验](practice.md#p3) |
+财务与成本公式统一见[财务基础](../business-learning/knowledge.md#finance)和[单位经济性](../business-learning/knowledge.md#unit-economics)。运营与产品引用同一口径，避免分别计算出相互矛盾的利润和获客成本。
 
-每组读完后应用到同一个英语 App，不再另外写一份商业计划书来交作业。数据不足时标明不确定性与下一步取证方式，不能让 AI 编造访谈或市场数字。
+## 2. 产品知识的阅读地图
 
-## 3. 开工产出与完成标准
-
-| 产出 | 足以进入开发的证据 | 尚不能由它证明的结论 |
+| 正文章节 | 范围 | 连接的业务问题 |
 | --- | --- | --- |
-| P1：定位与证据 | 人群、场景、当前替代办法清楚；判断有来源，关键未知已标出 | 已经存在稳定付费市场 |
-| P2：首版与原型 | 一条完整任务可尝试；功能取舍、内容来源与验收清楚；观察过卡点并修订 | 产品具有长期学习效果与留存 |
-| P3：验证计划 | 能接触首批目标用户；成本口径、指标、观察范围和决策条件明确 | 已经找到可规模复制的增长方式 |
+| [1～2：产品与客户](knowledge.md#product) | 价值层次、产品类型、使用者、付费者、决策者 | 买的人与用的人是否相同；交付究竟包含什么 |
+| [3：市场与竞争](knowledge.md#market) | 细分、规模、区域、产业链、替代方案 | 哪部分需求真正可服务；竞争发生在哪里 |
+| [4～5：需求与研究](knowledge.md#needs) | 任务、情境、需求强度、方法、证据与偏差 | 为什么选择、放弃或更换产品 |
+| [6：战略与定位](knowledge.md#strategy) | 战略取舍、差异化、关键风险 | 应集中资源做什么；成功需要哪些条件 |
+| [7：产品开发](knowledge.md#development) | 创新、发现、验证、开发、试产与推广 | 不同证据分别能够证明什么 |
+| [8～9：优先级与组合](knowledge.md#portfolio) | 取舍方法、产品线、SKU、版本与复杂度 | 哪些产品和变化值得持续维护 |
+| [10～11：体验与规格](knowledge.md#experience) | 用户旅程、服务蓝图、包装、规格、验收与变更 | 怎样减少购买、使用与交付中的阻碍 |
+| [12～13：质量与服务](knowledge.md#quality) | 安全、生产、供应、服务容量、内容与 AI 质量 | 扩大销量之后还能否可靠履约 |
+| [14～15：商业与渠道](knowledge.md#commercial) | 收费单位、成本结构、价值链、渠道适配 | 怎样卖与怎样做是否相互支持 |
+| [16～17：指标与生命周期](knowledge.md#measurement) | 指标口径、采用、匹配、维护与退出 | 产品是否产生价值；何时扩展、调整或退出 |
+| [18～19：组织与类型差异](knowledge.md#organization) | 角色职责、路线图、开发方式、行业差异 | 谁决定、谁承担后果；哪些概念不能照搬 |
 
-下一步把产品规则交给 [SQL 设计](../sql-learning/design.md)、[SwiftUI 实操](../swiftui-learning/practice.md)与 [Go API](../go-learning/practice.md)。技术练习的“单词列表”只是连接机制，不替你决定最终首版必须围绕单词还是语音。
+[判断与案例](design.md)进一步解释：SKU 增长与库存、服务增长与容量、企业成交与实际采用、平台规模与局部供需、数字产品收入与持续成本之间的关系。
 
-上线后的指标、学习效果与迭代继续跟随总路线第 42～44 项；收费、安全与隐私分别连接第 26～29 项，不把纸面计划当作已经完成这些实现。
+## 3. 外部资料与明确阅读范围
+
+本地正文提供跨领域的中文知识解释。外部资料用于补充原理与查证，不要求做教材中的题目。国外教材中的制度、市场数字和消费者行为案例不能直接当作国内事实。
+
+### 3.1 主教材：产品、商品与服务基础
+
+采用 OpenStax 开放教材《Principles of Marketing》的指定章节。以下均阅读正文、示意图和案例解释，跳过 Knowledge Check、练习题、职业活动与章末作业。
+
+| 具体章节与链接 | 阅读范围 | 理解重点 |
+| --- | --- | --- |
+| [9.1 Products, Services, and Experiences](https://openstax.org/books/principles-marketing/pages/9-1-products-services-and-experiences) | 产品、服务、体验的定义，产品价值层次及消费品 / 企业产品分类 | 产品不只是一件物品或一个功能；客户购买的是完整结果 |
+| [9.2 Product Items, Product Lines, and Product Mixes](https://openstax.org/books/principles-marketing/pages/9-2-product-items-product-lines-and-product-mixes) | Product Items、Product Lines、Product Mixes 及延伸产品线的正文 | 品类、产品线、组合宽度与深度怎样改变经营复杂度 |
+| [9.3 The Product Life Cycle](https://openstax.org/books/principles-marketing/pages/9-3-the-product-life-cycle) | 引入、成长、成熟、衰退及对应策略的正文 | 生命周期用于解释变化，不是所有产品必经的固定时间表 |
+| [9.7 Creating Value through Packaging and Labeling](https://openstax.org/books/principles-marketing/pages/9-7-creating-value-through-packaging-and-labeling) | 包装和标签的功能、价值及相关案例 | 保护、识别、信息和物流如何影响价值；国内标签要求另查 |
+| [10.2 Stages of the New Product Development Process](https://openstax.org/books/principles-marketing/pages/10-2-stages-of-the-new-product-development-process) | 从创意产生、筛选、概念到开发、测试和商业化的阶段正文 | 不同阶段减少不同的不确定性，阶段之间可以反复 |
+| [10.3 The Use of Metrics in Evaluating New Products](https://openstax.org/books/principles-marketing/pages/10-3-the-use-of-metrics-in-evaluating-new-products) | 新产品评估指标及解释正文 | 采用、质量、经济结果需要一起看；财务计算复用商业正文 |
+| [10.5 Stages in the Consumer Adoption Process for New Products](https://openstax.org/books/principles-marketing/pages/10-5-stages-in-the-consumer-adoption-process-for-new-products) | 认知、兴趣、评估、试用与采用，以及采用者差异 | 新产品需要降低理解和切换负担，不只增加曝光 |
+| [11.3 The Gap Model of Service Quality](https://openstax.org/books/principles-marketing/pages/11-3-the-gap-model-of-service-quality) | 服务质量差距模型的各项差距、解释与案例 | 顾客期待、内部理解、服务标准、实际交付与对外承诺可能不一致 |
+
+### 3.2 专题资料：需求、决策与体验
+
+| 资料与直达链接 | 指定范围 | 适用边界 |
+| --- | --- | --- |
+| Christensen Institute [Jobs to Be Done Theory](https://www.christenseninstitute.org/theory/jobs-to-be-done/) | Definition、Morning milkshakes 案例、Helpful Tools 下的三项考虑因素 | 理解情境、进展和选择原因；不能代替市场规模与履约分析 |
+| Stanford d.school [Design Thinking Bootleg](https://dschool.stanford.edu/tools/design-thinking-bootleg) | 页面 How does it work? 与五种模式：Empathize、Define、Ideate、Prototype、Test；工具卡按需要查阅 | 学习研究和探索的思路；不要求执行活动或采用固定顺序 |
+| SVPG [The Four Big Risks](https://www.svpg.com/four-big-risks/) | 正文全文 | 从软件产品视角区分价值、可用性、可实现性、商业可持续性；商品和服务还需考虑生产与交付条件 |
+| Lean Startup [Methodology](https://theleanstartup.com/principles) | Develop An MVP、Validated Learning 两节；Build-Measure-Learn 段落用于理解反馈关系 | 了解 MVP 的学习目的与实验边界；不要求设计实验，不能用方法原则替代安全和履约要求 |
+| Product Talk [Opportunity Solution Trees](https://www.producttalk.org/opportunity-solution-trees/) | What is an opportunity solution tree?、Choosing a Target Opportunity，以及问题与方案、比较多个方案的相关解释 | 理解目标、机会、方案和证据的关系；不要求制作树图 |
+| NN/g [UX Roadmaps: Definition and Components](https://www.nngroup.com/articles/ux-roadmaps/) | What Is a UX Roadmap?、Roadmap Structure and Primary Components、Roadmaps vs. Similar Concepts | 区分方向、问题和任务排期；不能把路线图视为无条件交付承诺 |
+
+### 3.3 国内事实与规则的查证入口
+
+| 官方入口 | 具体查证范围 | 使用方式 |
+| --- | --- | --- |
+| 国家统计局[指标解释](https://www.stats.gov.cn/sj/zbjs/) | 与所用数据对应的指标定义、统计范围、单位、期间与发布说明 | 分清销售额、零售额、增加值等不同口径；数据所属年份和范围必须与判断一致 |
+| 国家市场监督管理总局 / 国家标准委[国家标准全文公开系统](https://openstd.samr.gov.cn/bzgk/std/) | 具体标准的编号、名称、状态、实施日期及适用范围 | 查适用标准，区分强制性与推荐性要求；再核对行业、地方、认证及产品类别要求 |
+| [商业法律与规则知识](../business-learning/knowledge.md#law)及[资料导航](../business-learning/README.md) | 国内交易、消费者、竞争、数据、知识产权、主体、税务及条件性行业要求 | 根据实际产品、地域、客户与交易方式判断适用性；法律、草案和平台规则不能混为一谈 |
+| [国内渠道资料导航](../growth-learning/README.md) | 平台官方说明、账户与行业规则、推广工具及指标口径 | 同一平台的自然内容、广告、电商和达人合作可能采用不同规则 |
+
+## 4. 怎样使用这套知识
+
+可以先沿产品、市场、需求、战略、开发、交付、商业与迭代顺序理解关系，再按问题查阅运营和商业正文。看案例时关注导致结果的条件，而不是记住某个行业的固定做法。
+
+AI 可以解释术语、比较已提供的方案、梳理公开材料与发现逻辑矛盾；它生成的市场数字、顾客画像、访谈和财务数据不构成真实证据。具体行业规模、政策、平台规则、标准与合同含义以可追溯的一手材料为准。
+
+资料核对：2026-09-30。上表指定教材与专题文章已核对标题和相应正文；统计与标准系统是查询入口，不代表已经核查所有行业。动态平台规则和行业要求在实际使用时再次确认。
