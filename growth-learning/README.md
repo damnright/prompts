@@ -21,7 +21,7 @@
 | 内容、达人合作、公关 | 怎样解释价值、积累信任并处理声誉问题 | [第 7 节](knowledge.md#content-brand) |
 | 活动与促销 | 优惠改变什么，如何连接库存、容量与后续经营 | [第 8 节](knowledge.md#campaigns) |
 | 用户、CRM、留存与复购 | 怎样按真实需求维护客户关系 | [第 9 节](knowledge.md#crm) |
-| 商品、商家、渠道与服务运营 | 供给、动销、履约、售后与客户成功 | [第 10 节](knowledge.md#operations) |
+| 商品、商家、渠道与服务运营 | 供给、动销、门店选址、单店经营、履约与客户成功 | [第 10 节](knowledge.md#operations) |
 | 数据与经营指标 | 漏斗、同期群、交易和质量的口径 | [第 11 节](knowledge.md#metrics) |
 | 归因、实验与预算 | 记功与增量有何不同，新增投入能否支持结果 | [第 12 节](knowledge.md#measurement-budget) |
 | 协同、规则与边界 | 谁对事实、权限、交付和平台行为负责 | [第 13 节](knowledge.md#coordination-rules) |
@@ -30,7 +30,7 @@
 
 主教材采用 OpenStax 的 **Principles of Marketing** 指定章节。它提供跨品类的营销框架；美国行业数据、法律、平台和案例只用于理解其背景，不作为中国市场事实。中文知识正文提供国内经营语境的解释与多类案例。
 
-下表的范围均指概念正文、模型说明和示例；章末问答、练习、项目、认证及产品推销内容可以跳过。下列官方章节目录与公开页面于 **2026-09-30** 核对。
+下表的范围均指概念正文、模型说明和示例；章末问答、练习、项目、认证及产品推销内容可以跳过。原有官方章节目录与公开页面于 **2026-09-30** 核对；新增第 18.3 节的指定范围于 **2026-10-01** 核对。
 
 | 资料与具体范围 | 阅读重点 | 对应本地解释 |
 | --- | --- | --- |
@@ -41,6 +41,7 @@
 | OpenStax [第 11 章目录](https://openstax.org/books/principles-marketing/pages/11-in-the-spotlight) → **11.1 Classification of Services、11.2 The Service-Profit Chain Model and the Service Marketing Triangle、11.3 The Gap Model of Service Quality** | 服务特征、员工、预期与交付质量 | [第 10 节](knowledge.md#operations) |
 | OpenStax [13.1 The Promotion Mix and Its Elements](https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements)、[13.3 Integrated Marketing Communications](https://openstax.org/books/principles-marketing/pages/13-3-integrated-marketing-communications)，概念正文；[第 15 章目录](https://openstax.org/books/principles-marketing/pages/15-in-the-spotlight) → **15.1 Personal Selling and Its Role in the Promotion Mix、15.3 Steps in the Personal Selling Process、15.5 Sales Promotion and Its Role in the Promotion Mix、15.6 Main Types of Sales Promotion** | 传播组合、销售与促销的不同职责 | [第 6～8 节](knowledge.md#channels) |
 | OpenStax [17.1 The Use and Value of Marketing Channels](https://openstax.org/books/principles-marketing/pages/17-1-the-use-and-value-of-marketing-channels)、[17.2 Types of Marketing Channels](https://openstax.org/books/principles-marketing/pages/17-2-types-of-marketing-channels)，概念正文；渠道合同与利益安排另见商务主题 | 触达、交易、分销与中间商价值 | [第 6、10 节](knowledge.md#channels) |
+| OpenStax [18.3 Retailing Strategy Decisions](https://openstax.org/books/principles-marketing/pages/18-3-retailing-strategy-decisions) → **Store Location** 的可达性、竞争、地点类型与店内布局；**Retail Pricing** 的成本、支付意愿及加价、降价、毛利区别；**Merchandise** 的组合与品类管理正文 | 选址、货品和价格怎样共同支持单店经营；海外地点分类、距离及行业加价案例仅解释机制，不能直接套到国内 | [第 10.4 节](knowledge.md#store-location)；计算复用商务正文 |
 | Microsoft [Patterns of Trustworthy Experimentation: Pre-Experiment Stage](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/) → **Forming a Hypothesis and Selecting Users**，重点是目标、主指标与护栏、样本判断和分组；工程、方差缩减等按需深入 | 实验可信度与因果边界 | [第 11～12 节](knowledge.md#metrics) |
 
 原教材章节便于继续阅读；本地正文是通用概念与国内案例的独立说明，不复制原书的完整章文、图片或习题。ToG 的制度不由国外教材解释，国内制度阅读见商务主题。

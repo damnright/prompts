@@ -38,7 +38,7 @@
 
 ## 3. 指定资料与阅读范围
 
-来源核对于 **2026-09-30**。国内制度以现行官方文本为主；外国教材只解释经济、经营和谈判方法，不作为国内登记、税务、劳动或交易规范。官方网页的发布时间可能早于修订时间，应同时看正文版本与施行日期。
+来源核对于 **2026-09-30**；本次比较价格规则与增值税留抵、不得抵扣范围于 **2026-10-01** 补充核对。国内制度以现行官方文本为主；外国教材只解释经济、经营和谈判方法，不作为国内登记、税务、劳动或交易规范。官方网页的发布时间可能早于修订时间，应同时看正文版本与施行日期。
 
 ### 3.1 经济、模式与财务基础
 
@@ -64,7 +64,7 @@
 | 税务总局法规库[《公司法》](https://fgk.chinatax.gov.cn/zcfgk/c100009/c5233383/content.html) | 第 3、23、47～54、59、67、180 条：责任、出资、股东会/董事会和管理人员义务；旧公司另查过渡安排 | [公司与股权](knowledge.md#organization) |
 | 市场监管总局[《政府采购法》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_47b5807c40c040368eb5f13b489d6c43.html) | 第 2、22、26、43～50 条：适用范围、供应商条件、采购方式、合同；具体机会同时看采购文件 | [ToG 采购](knowledge.md#transactions) |
 | 工信部[《保障中小企业款项支付条例》](https://www.miit.gov.cn/jgsj/zfs/xzfg/art/2025/art_d9b6cd05f3734869aa34caff247089ff.html) | 第 2～3、7～11、14～15 条：适用主体、付款、验收、非现金支付和逾期；2025-06-01 起施行 | [账期与回款](knowledge.md#transactions) |
-| 税务机关[《增值税法》](https://fgk.chinatax.gov.cn/zcfgk/c100009/c5237365/content.html) | 第 3～17、23～24、28、32～33、38 条：交易、价外税、计税、优惠和纳税时点；同时核对[2026 征管说明](https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5247478/content.html)及实际适用政策 | [税票](knowledge.md#finance) |
+| 税务机关[《增值税法》](https://fgk.chinatax.gov.cn/zcfgk/c100009/c5237365/content.html) | 第 3～17、21～24、28、32～33、38 条：交易、价外税、计税、留抵、不得抵扣、优惠和纳税时点；同时核对[2026 征管说明](https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5247478/content.html)及实际适用政策 | [税票](knowledge.md#finance) |
 | 税务机关[《发票管理办法》](https://shanxi.chinatax.gov.cn/web/detail/sx-11400-545-1781492) | 第 3、18～23、28～31 条：发票、开具/取得/真实内容/保管与查验；操作另看实际电子税务局指引 | [税票与对账](knowledge.md#finance) |
 | 市场监管总局[《劳动合同法》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html) | 第 2、7、10、17、19、22～24、39～47 条：劳动关系、合同、试用、培训、竞业与解除；工资社保同时查当地要求 | [用工](knowledge.md#organization) |
 
@@ -73,6 +73,7 @@
 | 官方资料 | 具体阅读范围 | 对应知识 |
 | --- | --- | --- |
 | 市场监管总局[《消费者权益保护法实施条例》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2024/art_0aea188276a44f0baf940ab95ee00e0a.html) | 第 7～13、17、19、21～24 条：安全、宣传、价格、承诺、无理由退货、预付与数据；不同商品/服务按条文条件理解 | [消费者](knowledge.md#law) |
+| 市场监管总局[《明码标价和禁止价格欺诈规定》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_9a1f82a007964950a1a0f6c056f2fedf.html) | 第 16～20 条：比较价格及七日规则的条件、折价基准、赠品、价格承诺与网络促销；2022-07-01 起施行，按具体行为与条件理解 | [定价与促销](knowledge.md#pricing) |
 | 市场监管总局[《广告法》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_5474cf75173c45d6a0379730fb4e8d97.html) | 第 2～4、8～9、14、28、38、46 条：适用、真实、明示、识别、虚假广告、代言与特殊行业审查 | [宣传](knowledge.md#law) |
 | 市场监管总局[《电子商务法》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_14453aa523094819aa8f1d4530ce3cc4.html) | 第 2、9～20、27～38、49～53 条：适用、经营者/平台、信息、交易与履约；平台章节仅对相应角色适用 | [线上交易](knowledge.md#law) |
 | 市场监管总局[《反不正当竞争法》](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_3737890d856a4e44a8ea07c50c90c116.html) | 2025 修订文本第 7～15 条：混淆、贿赂、宣传、秘密、有奖销售、诋毁、网络竞争及付款条件 | [竞争](knowledge.md#law) |

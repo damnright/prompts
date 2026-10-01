@@ -53,9 +53,11 @@
 | [9.3 The Product Life Cycle](https://openstax.org/books/principles-marketing/pages/9-3-the-product-life-cycle) | 引入、成长、成熟、衰退及对应策略的正文 | 生命周期用于解释变化，不是所有产品必经的固定时间表 |
 | [9.7 Creating Value through Packaging and Labeling](https://openstax.org/books/principles-marketing/pages/9-7-creating-value-through-packaging-and-labeling) | 包装和标签的功能、价值及相关案例 | 保护、识别、信息和物流如何影响价值；国内标签要求另查 |
 | [10.2 Stages of the New Product Development Process](https://openstax.org/books/principles-marketing/pages/10-2-stages-of-the-new-product-development-process) | 从创意产生、筛选、概念到开发、测试和商业化的阶段正文 | 不同阶段减少不同的不确定性，阶段之间可以反复 |
-| [10.3 The Use of Metrics in Evaluating New Products](https://openstax.org/books/principles-marketing/pages/10-3-the-use-of-metrics-in-evaluating-new-products) | 新产品评估指标及解释正文 | 采用、质量、经济结果需要一起看；财务计算复用商业正文 |
+| [10.3 The Use of Metrics in Evaluating New Products](https://openstax.org/books/principles-marketing/pages/10-3-the-use-of-metrics-in-evaluating-new-products) | 指标目的与定义正文；ROI 与 Product Adoption Rate 结合下方口径说明阅读 | 采用、质量、经济结果需要一起看；经营计算统一复用商业正文 |
 | [10.5 Stages in the Consumer Adoption Process for New Products](https://openstax.org/books/principles-marketing/pages/10-5-stages-in-the-consumer-adoption-process-for-new-products) | 认知、兴趣、评估、试用与采用，以及采用者差异 | 新产品需要降低理解和切换负担，不只增加曝光 |
 | [11.3 The Gap Model of Service Quality](https://openstax.org/books/principles-marketing/pages/11-3-the-gap-model-of-service-quality) | 服务质量差距模型的各项差距、解释与案例 | 顾客期待、内部理解、服务标准、实际交付与对外承诺可能不一致 |
+
+**10.3 的口径边界：** 原书 ROI 算例用销售额减去营销费用，未扣除商品或服务的交付成本，不能据此判断经营盈利；本资料相关计算以[商务商业的营销 ROI](../business-learning/knowledge.md#marketing-return)统一经营口径为准。原书 Product Adoption Rate 使用新增用户占总用户的比例，未明确采用行为、用户资格与观察窗口，不能直接代替实际采用率；实际采用按[产品指标](knowledge.md#measurement)明确对象、事件、分母和期间。
 
 ### 3.2 专题资料：需求、决策与体验
 
@@ -63,6 +65,7 @@
 | --- | --- | --- |
 | Christensen Institute [Jobs to Be Done Theory](https://www.christenseninstitute.org/theory/jobs-to-be-done/) | Definition、Morning milkshakes 案例、Helpful Tools 下的三项考虑因素 | 理解情境、进展和选择原因；不能代替市场规模与履约分析 |
 | Stanford d.school [Design Thinking Bootleg](https://dschool.stanford.edu/tools/design-thinking-bootleg) | 页面 How does it work? 与五种模式：Empathize、Define、Ideate、Prototype、Test；工具卡按需要查阅 | 学习研究和探索的思路；不要求执行活动或采用固定顺序 |
+| Product Talk [Customer Interviews](https://www.producttalk.org/customer-interviews/) | 四节概念正文：Who should you interview?（对象选择）；访谈应问和不应问什么；如何综合每次访谈所得；如何综合多次访谈所得 | 理解角色选择、具体经历提问、单次情境与跨次归纳；原文偏数字产品，按实际业务适配角色；跳过固定访谈频率、课程推广与模板填写，不把访谈数量当验证门槛 |
 | SVPG [The Four Big Risks](https://www.svpg.com/four-big-risks/) | 正文全文 | 从软件产品视角区分价值、可用性、可实现性、商业可持续性；商品和服务还需考虑生产与交付条件 |
 | Lean Startup [Methodology](https://theleanstartup.com/principles) | Develop An MVP、Validated Learning 两节；Build-Measure-Learn 段落用于理解反馈关系 | 了解 MVP 的学习目的与实验边界；不要求设计实验，不能用方法原则替代安全和履约要求 |
 | Product Talk [Opportunity Solution Trees](https://www.producttalk.org/opportunity-solution-trees/) | What is an opportunity solution tree?、Choosing a Target Opportunity，以及问题与方案、比较多个方案的相关解释 | 理解目标、机会、方案和证据的关系；不要求制作树图 |
@@ -84,3 +87,5 @@
 AI 可以解释术语、比较已提供的方案、梳理公开材料与发现逻辑矛盾；它生成的市场数字、顾客画像、访谈和财务数据不构成真实证据。具体行业规模、政策、平台规则、标准与合同含义以可追溯的一手材料为准。
 
 资料核对：2026-09-30。上表指定教材与专题文章已核对标题和相应正文；统计与标准系统是查询入口，不代表已经核查所有行业。动态平台规则和行业要求在实际使用时再次确认。
+
+2026-10-01 补充核对：仅复核 OpenStax 10.3 的 ROI / 采用率口径，以及新增 Product Talk《Customer Interviews》的上述四节正文；其他资料保留原核对记录。
