@@ -48,13 +48,13 @@ SQL 已有资料继续复用；SwiftUI 与 Swift 共用 Xcode，Go 与 SQL 共�
 ## 阶段一：数据库与网络基础
 
 - [ ] **1～2. SQL / PostgreSQL 基础与设计评审**
-  - 表与查询：字段、SELECT、WHERE、NULL、ORDER BY、LIMIT；JOIN、聚合与结果粒度
+  - 表与查询：字段、SELECT、WHERE、NULL、ORDER BY、LIMIT；JOIN、聚合与结果粒度；子查询、EXISTS 与普通 CTE 基础识读
   - 类型与约束：时间与时区、JSONB、主外键、组合唯一、非空、范围与删除行为
   - 修改与事务：INSERT / UPDATE / DELETE、ACID、自动提交、提交 / 回滚 / 保存点、失败事务、零行更新与重复请求
   - 并发与性能：索引、稳定分页、EXPLAIN、MVCC、隔离级别、行锁与重试
   - 运行与演进：兼容迁移、连接预算、权限、VACUUM、WAL、备份与恢复的职责
   - 数据库设计：实体关系、每行粒度、事实 / 状态 / 快照、归属与生命周期
-  - 学习入口：[融合章节导读](sql-learning/README.md) 第 1～9 单元；Neon 为主教材，官方文档按具体问题查证
+  - 学习入口：[融合章节导读](sql-learning/README.md) 第 1～9 单元；以 AI 辅助开发与设计评审为目标，Neon 核心选读即可，不要求通读；官方文档按具体问题查证
   - 实操 1～2：[对应实操](sql-learning/practice.md)与[八表案例、设计评审](sql-learning/design.md)；环境复用[OrbStack + TablePlus](sql-learning/environment.md)
   - 完成标准：能设计一个小功能的数据模型，用约束、事务和并发反例检查正确性；基础语法能查能读即可。复杂查询、数据库内核与复制运维不作为开工门槛
   - Go 接入先理解系统边界，驱动与 API 编码在第 7～8 项完成；真实备份恢复演练在对外试用前完成

@@ -4,7 +4,7 @@
 
 SQL 是定义、查询和修改关系数据的语言，PostgreSQL 是本工程使用的数据库系统。沿一条主线同时学习语言与数据库行为，基础以识读为主，重点理解正确性、数据模型和架构取舍。
 
-**Neon 是主教材 → 本地实操观察行为 → 本地案例练习设计 → 官方文档定点查证。** 按下面第 1～9 单元推进；子查询、CTE、窗口函数列为选读，可以在需要时穿插。没有时间安排或刷题数量要求。
+**Neon 核心选读 → 本地实操观察行为 → 本地案例练习设计 → 官方文档定点查证。** 面向以 AI 为主开发：按第 1～9 单元学习，能读懂 AI 生成的 SQL、判断方案并验证关键行为。子查询、EXISTS 与普通 CTE 纳入第 4 单元基础识读；窗口函数与复杂查询按需选读。没有时间安排或刷题数量要求。
 
 先按[环境操作](environment.md)连接已有 OrbStack / TablePlus。继续使用 `prompts-sql-learning` 项目、`sql_learning` 数据库和默认 `127.0.0.1:55432`，密码保留在本地 .env。
 
@@ -12,9 +12,20 @@ SQL 是定义、查询和修改关系数据的语言，PostgreSQL 是本工程�
 
 本目录的“第 1～9 单元”是 SQL 内部的学习单元，不是总路线第 1～9 项的重新编号。SQL 与 PostgreSQL 共用一套材料和环境，避免先学抽象语法、再从头重复数据库教程。
 
+**不要求通读 Neon。** 开始时浏览一次 Basic Tutorial 总目录，知道有哪些能力；之后连续读完每个单元指定的一组章节，再集中实操，不必每读一小节就返回本页。未选章节按需查阅，通读不是继续开发的前提。
+
+| 学习深度 | 内容 | 使用 AI 时自己的职责 |
+| --- | --- | --- |
+| 看懂即可 | 查询、增删改、JOIN、聚合、子查询、EXISTS、普通 CTE 与常见函数 | 解释操作范围、每行含义与预期结果；语法可查，代码可由 AI 生成 |
+| 必须理解 | 数据粒度、实体关系、类型与 NULL、约束、事务、并发 | 明确业务规则，用重复、缺失、失败和并发场景检查是否被保证 |
+| 能判断取舍 | 索引、分页、迁移、权限、连接与备份恢复 | 审核前提和代价，要求执行计划、实验或恢复结果作为证据 |
+| 按需深入 | 窗口函数、递归查询、存储过程、触发器与其他专题 | 实际用到时再补用途、限制和替代方案 |
+
+AI 可以解释教材、生成 SQL 和提出反例；自己先说清业务规则与预期行为，再检查实际结果。约束、事务失败和并发等关键实验仍需亲自观察；“AI 说没问题”或“SQL 执行成功”不能代替正确性验证。
+
 | 总路线范围 | 本目录学习任务 | 开工前应拿出的证据 |
 | --- | --- | --- |
-| 第 1 项：数据库基础 | 单元 1～5：查询、类型、约束、增删改、事务、关联与索引 | 能读写一个小功能的数据，解释 NULL、统计粒度、失败回滚和重复输入；能提出稳定排序与索引候选 |
+| 第 1 项：数据库基础 | 单元 1～5：查询、类型、约束、增删改、事务、关联、子查询 / EXISTS / 普通 CTE 与索引 | 能借助 AI 读写一个小功能的数据，解释查询范围、中间结果、NULL、统计粒度、失败回滚和重复输入；能提出稳定排序与索引候选 |
 | 第 2 项：设计与评审 | 单元 6～9：并发、演进、系统边界和综合设计 | 能给出并发与归属反例，完成收藏设计和问题方案评审，说明历史、状态与删除的区别 |
 | 产品运行前再深化 | 单元 7 的恢复方案、单元 8 的连接与权限，结合总路线第 26～28、33～36 项 | 对外试用前真实恢复备份、落实权限并验证；不能把“读过”当作已经具备运行保障 |
 
@@ -25,7 +36,7 @@ SQL 是定义、查询和修改关系数据的语言，PostgreSQL 是本工程�
 - 表、字段、类型、筛选、排序、空值与修改范围。
 - 实体关系、主外键、唯一性、非空与范围约束。
 - 多条修改的事务边界，以及重复、失败和并发时的行为。
-- JOIN 与统计粒度；查询、索引、排序与执行计划的联系。
+- JOIN 与统计粒度，子查询 / EXISTS / 普通 CTE 的用途与中间结果；查询、索引、排序与执行计划的联系。
 - 迁移、维护、恢复、权限与连接的职责。
 - 从业务需求设计数据模型，用具体反例评审方案。
 
@@ -69,7 +80,9 @@ Neon 的 Section 编号来自 [Basic Tutorial](https://neon.com/postgresql/tutor
 - **资料**：Section 3 **Joining Multiple Tables** 的 [Joins](https://neon.com/postgresql/tutorial/joins)、[Table Aliases](https://neon.com/postgresql/tutorial/alias)、[INNER JOIN](https://neon.com/postgresql/tutorial/inner-join)、[LEFT JOIN](https://neon.com/postgresql/tutorial/left-join)；Section 4 **Grouping Data** 的 [GROUP BY](https://neon.com/postgresql/tutorial/group-by)、[HAVING](https://neon.com/postgresql/tutorial/having)。
 - **接着读**：[Aggregate Functions](https://neon.com/postgresql/aggregate-functions) 的 Introduction 及 COUNT / SUM / AVG / MIN / MAX examples；Section 15 **Conditional Expressions & Operators** 的 [CASE](https://neon.com/postgresql/tutorial/case)、[COALESCE](https://neon.com/postgresql/tutorial/coalesce)、[NULLIF](https://neon.com/postgresql/tutorial/nullif)。
 - **范围**：理解 INNER / LEFT JOIN 的行数变化、统计粒度、NULL 与除零。其他 JOIN 类型先认识用途，CAST 按需查。
+- **基础识读**：Section 7 **Subquery** 的 [Subquery](https://neon.com/postgresql/tutorial/subquery)、[EXISTS](https://neon.com/postgresql/tutorial/exists)；Section 8 **Common Table Expressions** 的 [CTE](https://neon.com/postgresql/tutorial/cte)。各读 Introduction、基本语法与一个简单 SELECT 例子；EXISTS 另外读 NOT EXISTS 的例子。认识子查询返回值、存在性判断和普通 WITH 的分步组织，能看懂内层引用外层字段；不展开递归或复杂嵌套。
 - **实操**：[第 4 单元](practice.md#joins)，Q09～Q16、Q28；观察无会话用户是否丢失、会话时长是否被重复累计、没有数据的最小 / 最大值如何表达。
+- **识读对应练习**：[Q17～Q20](practice.md#queries)，对照答案解释内外层关系、EXISTS / NOT EXISTS 和 CTE 中间结果，再选例运行。无需默写，不要求四题全部独立作答；窗口函数见后面的选读。
 
 <a id="unit-5"></a>
 
@@ -114,13 +127,13 @@ Neon 的 Section 编号来自 [Basic Tutorial](https://neon.com/postgresql/tutor
 
 <a id="advanced"></a>
 
-### 选读：子查询、CTE 与窗口函数
+### 选读：窗口函数与复杂查询
 
-第 4 单元后可按需要穿插，用于读懂复杂报表。
+第 4 单元已覆盖子查询、EXISTS 与普通 CTE 的基础识读。本节在遇到最近一条记录、排名、累计或复杂报表时展开，不作为基础学习的完成门槛。
 
-- **资料**：Neon Section 7 **Subquery** 的 [Subquery](https://neon.com/postgresql/tutorial/subquery)、[Correlated Subquery](https://neon.com/postgresql/tutorial/correlated-subquery)、[EXISTS](https://neon.com/postgresql/tutorial/exists)；Section 8 **Common Table Expressions** 的 [CTE](https://neon.com/postgresql/tutorial/cte)。
+- **关联子查询进阶**：Neon Section 7 的 [Correlated Subquery](https://neon.com/postgresql/tutorial/correlated-subquery)，读 Introduction 和按外层分组条件计算平均值的例子，追踪内层如何引用外层行。
 - **窗口函数**：[PostgreSQL Window Functions](https://neon.com/postgresql/window-function) 的 Introduction、Syntax 中 PARTITION BY / ORDER BY / frame_clause，以及 ROW_NUMBER / RANK / DENSE_RANK 小节。
-- **范围与实操**：识读用途与中间结果，进入[选读练习 Q17～Q24](practice.md#queries)，可以拆解答案。ANY / ALL、Recursive CTE、FIRST_VALUE / LAST_VALUE、LAG / LEAD 按需；不要求默写复杂查询。
+- **范围与实操**：识读用途与中间结果，进入[选读练习 Q21～Q24](practice.md#queries)，可以拆解答案。ANY / ALL、Recursive CTE、FIRST_VALUE / LAST_VALUE、LAG / LEAD 按需；不要求默写复杂查询。
 
 ## 官方文档：遇到具体问题时查
 
