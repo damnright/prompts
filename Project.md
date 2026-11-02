@@ -1,3 +1,7 @@
+## 需求挖掘
+
+利用 similarweb,semrush,Google Trends 挖掘用户需求和产品关键词，查询可注册域名，确定产品关键词并注册域名
+
 ## 软件工程
 
 core：multi-agent cooperation，spec driven，AI self-iteration

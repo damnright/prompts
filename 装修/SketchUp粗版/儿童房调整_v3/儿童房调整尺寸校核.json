@@ -1,0 +1,31 @@
+{
+  "model": "/Users/yuyang/Projects/prompts/装修/SketchUp粗版/儿童房调整_v3/户型结构布局粗稿_v3_书桌居中柜体加长.skp",
+  "desk_mm": [
+    1000,
+    600,
+    750
+  ],
+  "wardrobe_mm": [
+    1400,
+    600,
+    2400
+  ],
+  "desk_to_bed_mm": 50,
+  "desk_to_cabinet_y_gap_mm": 55,
+  "door_swing_to_cabinet_mm": 75,
+  "unchanged_objects_verified": 649,
+  "chair_bounds_mm": [
+    [
+      9850.0,
+      6695.0,
+      420.0
+    ],
+    [
+      10300.0,
+      7145.0,
+      460.0
+    ]
+  ],
+  "bed_unchanged": true,
+  "status": "VERIFIED"
+}
