@@ -2,6 +2,8 @@
 
 [技术路线：第 7～8 项](../tech-list.md) · [通用学习流程](../learning-flow.md) · [环境操作](environment.md) · [实操](practice.md) · [设计与评审](design.md)
 
+逐章对话式学习见 [Go 后端开发与服务运行大纲](outline.md)：7 个阶段、36 章，覆盖语言特性、后端开发、服务器与运维、架构设计；章节编号独立于本页 G1～G7 和总技术路线编号。下文保留第 7～8 项的教材与实操导航。
+
 第 7 项以 **A Tour of Go + 官方入门教程**为主；第 8 项按一个单词 API 的实现顺序读标准库、Go 数据库指南和 pgx 文档。采用 `net/http + pgx / pgxpool`，复用已有 PostgreSQL，不增加 Web 框架、ORM、Redis 或第二套数据库容器。
 
 ## 1. 学习要点与前置条件
